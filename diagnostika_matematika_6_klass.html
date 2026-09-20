@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Диагностическое занятие — Математика, 6 класс</title>
+<style>
+:root{
+  --bg:#f5f3ef; --card:#fffdf9; --ink:#30343b; --muted:#77736d;
+  --accent:#8fa8a0; --accent2:#d8b9a5; --line:#e5dfd6; --good:#6f947d; --bad:#b86f69;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+.container{max-width:920px;margin:auto;padding:24px 16px 60px}
+.hero{background:linear-gradient(135deg,#e6eee9,#f2e6df);border-radius:24px;padding:28px;margin-bottom:18px}
+h1{margin:0 0 8px;font-size:30px} h2{font-size:21px;margin:0 0 10px}
+p{margin:6px 0}.muted{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.task{padding:14px;border:1px solid var(--line);border-radius:14px;background:#fff}
+.task b{display:block;margin-bottom:7px}
+input[type=text]{width:100%;padding:10px;border:1px solid #d8d2c9;border-radius:10px;font-size:16px;margin-top:7px}
+button{border:0;border-radius:12px;padding:11px 16px;background:var(--accent);color:white;font-weight:600;cursor:pointer;margin:5px 5px 5px 0}
+button.secondary{background:#b5afa6} button:hover{filter:brightness(.96)}
+details{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}
+.answer{color:#536f61;font-weight:600}
+.score{font-size:20px;font-weight:700;margin-top:12px}
+.teacher{background:#f0eee9}
+ul{margin-top:7px}.tag{display:inline-block;background:#ebe6df;padding:4px 9px;border-radius:99px;font-size:13px;margin:3px}
+.small{font-size:14px}
+hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+</style>
+</head>
+<body>
+<div class="container">
+<section class="hero">
+  <div class="tag">Пробное занятие · 6 класс</div>
+  <h1>Диагностика знаний по математике</h1>
+  <p>Цель — не поставить оценку, а быстро понять, что ученик уже умеет и где есть пробелы.</p>
+  <p class="muted small">Рекомендуемое время: 45–60 минут. Не обязательно выполнять всё: если видишь устойчивую ошибку, переходи дальше.</p>
+</section>
+
+<section class="card teacher">
+<h2>Для преподавателя: как проводить</h2>
+<ul>
+<li><b>Первые 5 минут:</b> попроси ученика рассказать, что ему легко/сложно в математике и какие темы сейчас проходят.</li>
+<li><b>Основная диагностика:</b> сначала дай задания без подсказок. Проси проговаривать ход решения — это важнее скорости.</li>
+<li><b>Если задание явно слишком лёгкое:</b> не задерживайся, переходи к следующему уровню.</li>
+<li><b>Если ошибся:</b> не сообщай сразу ответ. Спроси: «Проверь действие», «Какое правило здесь нужно?», «Можешь решить другим способом?»</li>
+<li><b>Последние 5–10 минут:</b> разберите 1–2 ошибки и спроси, какие темы ученик хотел бы подтянуть.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Устный старт · 5 минут</h2>
+<div class="grid">
+<div class="task"><b>1</b> Что больше: 0,7 или 0,65?<input type="text" id="q1"></div>
+<div class="task"><b>2</b> Назови число, противоположное −8.<input type="text" id="q2"></div>
+<div class="task"><b>3</b> Сколько будет 25% от 100?<input type="text" id="q3"></div>
+<div class="task"><b>4</b> Что означает дробь 3/5?<input type="text" id="q4"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">1) 0,7 · 2) 8 · 3) 25 · 4) Три пятых; например, 3 из 5 равных частей.</p></details>
+</section>
+
+<section class="card">
+<h2>2. Вычисления · базовый уровень</h2>
+<div class="grid">
+<div class="task"><b>5</b> 348 + 275 =<input type="text" id="q5"></div>
+<div class="task"><b>6</b> 900 − 467 =<input type="text" id="q6"></div>
+<div class="task"><b>7</b> 24 · 15 =<input type="text" id="q7"></div>
+<div class="task"><b>8</b> 864 : 12 =<input type="text" id="q8"></div>
+<div class="task"><b>9</b> 4,7 + 2,35 =<input type="text" id="q9"></div>
+<div class="task"><b>10</b> 8,4 − 3,75 =<input type="text" id="q10"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">5) 623 · 6) 433 · 7) 360 · 8) 72 · 9) 7,05 · 10) 4,65</p></details>
+</section>
+
+<section class="card">
+<h2>3. Дроби</h2>
+<div class="grid">
+<div class="task"><b>11</b> Сократи дробь: 12/18.<input type="text" id="q11"></div>
+<div class="task"><b>12</b> Вычисли: 2/7 + 3/7.<input type="text" id="q12"></div>
+<div class="task"><b>13</b> Вычисли: 5/6 − 1/3.<input type="text" id="q13"></div>
+<div class="task"><b>14</b> Вычисли: 3/4 · 2/3.<input type="text" id="q14"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">11) 2/3 · 12) 5/7 · 13) 1/2 · 14) 1/2</p></details>
+</section>
+
+<section class="card">
+<h2>4. Отрицательные числа</h2>
+<div class="grid">
+<div class="task"><b>15</b> Расставь по возрастанию: −3; 5; −7; 0.<input type="text" id="q15"></div>
+<div class="task"><b>16</b> −6 + 10 =<input type="text" id="q16"></div>
+<div class="task"><b>17</b> 4 − 9 =<input type="text" id="q17"></div>
+<div class="task"><b>18</b> −3 · (−5) =<input type="text" id="q18"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">15) −7; −3; 0; 5 · 16) 4 · 17) −5 · 18) 15</p></details>
+</section>
+
+<section class="card">
+<h2>5. Порядок действий и выражения</h2>
+<div class="grid">
+<div class="task"><b>19</b> 48 : (6 + 2) · 3 =<input type="text" id="q19"></div>
+<div class="task"><b>20</b> 7 + 3 · 4 − 5 =<input type="text" id="q20"></div>
+<div class="task"><b>21</b> Упрости: 5x + 2x − x.<input type="text" id="q21"></div>
+<div class="task"><b>22</b> Найди значение 3a + 5 при a = 4.<input type="text" id="q22"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">19) 18 · 20) 14 · 21) 6x · 22) 17</p></details>
+</section>
+
+<section class="card">
+<h2>6. Уравнения</h2>
+<div class="grid">
+<div class="task"><b>23</b> x + 17 = 42<input type="text" id="q23"></div>
+<div class="task"><b>24</b> 5x = 35<input type="text" id="q24"></div>
+<div class="task"><b>25</b> 3x − 7 = 14<input type="text" id="q25"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">23) x = 25 · 24) x = 7 · 25) x = 7</p></details>
+</section>
+
+<section class="card">
+<h2>7. Текстовая задача</h2>
+<div class="task">
+<b>26.</b> В магазине тетрадь стоит 45 рублей. Маша купила 4 тетради и ручку за 60 рублей. Сколько рублей она заплатила?
+<input type="text" id="q26">
+<p class="muted small">Попроси обязательно записать решение, а не только ответ.</p>
+</div>
+<details><summary>Ответ</summary><p class="answer">45 · 4 + 60 = 240 рублей.</p></details>
+</section>
+
+<section class="card">
+<h2>8. Геометрия</h2>
+<div class="grid">
+<div class="task"><b>27.</b> Найди периметр прямоугольника со сторонами 7 см и 4 см.<input type="text" id="q27"></div>
+<div class="task"><b>28.</b> Найди площадь этого прямоугольника.<input type="text" id="q28"></div>
+<div class="task"><b>29.</b> Один угол треугольника равен 50°, второй — 60°. Чему равен третий?<input type="text" id="q29"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">27) 22 см · 28) 28 см² · 29) 70°</p></details>
+</section>
+
+<section class="card">
+<h2>9. Задания «на подумать» · если базовые темы идут уверенно</h2>
+<div class="grid">
+<div class="task"><b>30.</b> Не вычисляя полностью, объясни, почему 7/12 больше 1/2.<input type="text" id="q30"></div>
+<div class="task"><b>31.</b> У Маши было 800 рублей. Она потратила 35% суммы. Сколько рублей осталось?<input type="text" id="q31"></div>
+<div class="task"><b>32.</b> Найди число, если 3/5 этого числа равны 24.<input type="text" id="q32"></div>
+</div>
+<details><summary>Ответы</summary><p class="answer">30) 1/2 = 6/12, поэтому 7/12 больше · 31) 520 руб. · 32) 40</p></details>
+</section>
+
+<section class="card">
+<h2>Итоговая фиксация</h2>
+<p>После занятия отметь, как ученик справлялся:</p>
+<div class="grid">
+<div class="task"><b>Счёт и вычисления</b><label><input type="checkbox"> уверенно</label><br><label><input type="checkbox"> с ошибками</label><br><label><input type="checkbox"> нужна отработка</label></div>
+<div class="task"><b>Дроби</b><label><input type="checkbox"> уверенно</label><br><label><input type="checkbox"> с ошибками</label><br><label><input type="checkbox"> нужна отработка</label></div>
+<div class="task"><b>Отрицательные числа</b><label><input type="checkbox"> уверенно</label><br><label><input type="checkbox"> с ошибками</label><br><label><input type="checkbox"> нужна отработка</label></div>
+<div class="task"><b>Уравнения</b><label><input type="checkbox"> уверенно</label><br><label><input type="checkbox"> с ошибками</label><br><label><input type="checkbox"> нужна отработка</label></div>
+<div class="task"><b>Текстовые задачи</b><label><input type="checkbox"> уверенно</label><br><label><input type="checkbox"> с ошибками</label><br><label><input type="checkbox"> нужна отработка</label></div>
+<div class="task"><b>Геометрия</b><label><input type="checkbox"> уверенно</label><br><label><input type="checkbox"> с ошибками</label><br><label><input type="checkbox"> нужна отработка</label></div>
+</div>
+</section>
+
+<section class="card teacher">
+<h2>Как интерпретировать результат</h2>
+<ul>
+<li><b>Уверенно считает, но ошибается в дробях:</b> вероятен пробел именно в теме дробей, а не «слабая математика».</li>
+<li><b>Путается в отрицательных числах:</b> отдельно проверить координатную прямую и правила знаков.</li>
+<li><b>Решает вычисления, но не уравнения:</b> проверить понимание обратных действий и структуры выражения.</li>
+<li><b>Знает формулы, но не решает задачи:</b> поработать над чтением условия, краткой записью и выбором действия.</li>
+<li><b>Ошибок много уже в базовых вычислениях:</b> лучше не перегружать 6-классника сложными темами, а сначала восстановить арифметическую базу.</li>
+</ul>
+<p><b>Важно:</b> один пробный урок не даёт полной картины. Твоя задача сегодня — определить 2–3 наиболее заметные зоны для дальнейшей диагностики/работы.</p>
+</section>
+
+<script>
+const answers = {
+q1:"0,7",q2:"8",q3:"25",q5:"623",q6:"433",q7:"360",q8:"72",
+q9:"7,05",q10:"4,65",q11:"2/3",q12:"5/7",q13:"1/2",q14:"1/2",
+q15:"−7; −3; 0; 5",q16:"4",q17:"−5",q18:"15",q19:"18",q20:"14",
+q21:"6x",q22:"17",q23:"25",q24:"7",q25:"7",q26:"240",q27:"22",q28:"28",q29:"70",q31:"520",q32:"40"
+};
+function norm(s){return s.toLowerCase().replaceAll(" ","").replaceAll(",",".").replaceAll("−","-").replaceAll("см²","").replaceAll("руб.","")}
+function check(){
+ let total=0, ok=0;
+ for(const [id,a] of Object.entries(answers)){
+   total++;
+   const el=document.getElementById(id);
+   if(!el) continue;
+   const user=norm(el.value), target=norm(a);
+   if(user===target){ok++; el.style.borderColor="var(--good)"} else el.style.borderColor="var(--bad)";
+ }
+ document.getElementById("result").textContent=`Проверено: ${ok} из ${total}. Для пробного занятия важнее не балл, а то, на каких типах заданий появляются ошибки.`;
+}
+</script>
+<div class="card">
+<h2>Быстрая автоматическая проверка введённых ответов</h2>
+<button onclick="check()">Проверить ответы</button>
+<button class="secondary" onclick="location.reload()">Сбросить</button>
+<div id="result" class="score"></div>
+<p class="muted small">Автопроверка рассчитана на числовые ответы. Задания 4 и 30 оценивай устно.</p>
+</div>
+</div>
+</body>
+</html>
